@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Formulário de Login e Registro com HTML5 e CSS3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script>
+        function mostrarCadastro() {
+            document.getElementById("login").style.display = "none";
+            document.getElementById("cadastro").style.display = "block";
+        }
+
+        function mostrarLogin() {
+            document.getElementById("cadastro").style.display = "none";
+            document.getElementById("sobre").style.display = "none";
+            document.getElementById("login").style.display = "block";
+
+        }
+
+        function mostrarSobre() {
+            document.getElementById("cadastro").style.display = "none";
+            document.getElementById("login").style.display = "none";
+            document.getElementById("sobre").style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <!--FORMULÁRIO DE LOGIN-->
+            <div id="login">
+                <form method="post" action="">
+                    <h1>Organizado</h1>
+                    <h2>Login</h2>
+                    <p>
+                        <label for="email_login">Seu e-mail</label>
+                        <input id="email_login" name="email_login" required="required" type="email"
+                            placeholder="aluno@ufca.br" />
+                    </p>
+
+                    <p>
+                        <label for="senha_login">Sua senha</label>
+                        <input id="senha_login" name="senha_login" required="required" type="password"
+                            placeholder="********" />
+                    </p>
+
+                    <p>
+                        <input type="checkbox" name="manterlogado" id="manterlogado" value="" />
+                        <label for="manterlogado">Manter-me logado</label>
+                    </p>
+
+                    <p>
+                        <input type="submit" value="Logar" />
+                    </p>
+
+                    <p class="link">
+                        Ainda não tem conta? <a href="#" onclick="mostrarCadastro()">Cadastre-se</a>
+                    </p>
+
+                    <p class="link">
+                        <a href="#" onclick="mostrarSobre()">Sobre</a>
+                    </p>
+                </form>
+            </div>
+
+            <!--FORMULÁRIO DE CADASTRO-->
+            <div id="cadastro" style="display: none;">
+                <form method="post" action="">
+                    <h1>Cadastro</h1>
+
+                    <p>
+                        <label for="nome_cad">Seu nome</label>
+                        <input id="nome_cad" name="nome_cad" required="required" type="text"
+                            placeholder="ex. João da Silva" />
+                    </p>
+
+                    <p>
+                        <label for="email_cad">Seu e-mail</label>
+                        <input id="email_cad" name="email_cad" required="required" type="email"
+                            placeholder="aluno@ufca.br" />
+                    </p>
+
+                    <p>
+                        <label for="senha_cad">Sua senha</label>
+                        <input id="senha_cad" name="senha_cad" required="required" type="password"
+                            placeholder="ads123" />
+                    </p>
+
+                    <p>
+                        <input type="submit" value="Cadastrar" />
+                    </p>
+
+                    <p class="link">
+                        Já tem conta? <a href="#" onclick="mostrarLogin()">Ir para Página Inicial</a>
+                    </p>
+                </form>
+            </div>
+
+            <!-- CONTEÚDO SOBRE A APLICAÇÃO -->
+            <div id="sobre" style="display: none;">
+                <h1>Sobre</h1>
+                <p>
+                <h2>Organizado: O aplicativo que descomplica sua vida acadêmica!</h2>
+                Cansado de anotações desorganizadas e pilhas de papéis? Apresentamos o Estudante Organizado, o
+                aplicativo definitivo para turbinar seus estudos!
+
+                Com o Estudante Organizado, você:
+
+                Armazena todas as suas anotações e tarefas em um só lugar: Diga adeus aos cadernos perdidos e anotações
+                rabiscadas! Guarde tudo com segurança e acesse de qualquer dispositivo, a qualquer hora.
+                Edita e formata suas anotações como um profissional: Mude cores, tamanhos de fonte, adicione negrito,
+                itálico e muito mais. Deixe seus estudos mais bonitos e fáceis de ler.
+                <p><strong><i>Estudante Organizado é Estudante Desenrolado!</i></strong></p>
+                </p>
+                <img src="https://iniciativabrindes.com.br/image/cache/data/blocos/bloco-de-anotacoes-com-post-it-e-caneta-personalizado-4-550x550.jpg"
+                    alt="Imagem Decorativa">
+                <p class="link">
+                    <a href="#" onclick="mostrarLogin()">Ir para Página Inicial</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
